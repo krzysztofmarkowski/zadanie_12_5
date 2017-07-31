@@ -8,7 +8,12 @@ function getQuote() {
 }
 
 function createTweet(input) { 
-    var data = input[0]; 
+    if (!input.length) {
+        return;
+    }
+    var data = input[0];
+
+    console.log(data);
 
     var quoteText = $(data.content).text().trim(); 
     var quoteAuthor = data.title; 
